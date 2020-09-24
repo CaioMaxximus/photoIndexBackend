@@ -2,10 +2,11 @@ package com.travel.photo.model;
 
 import java.util.Date;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
+@Component
 public class Like {
 	
 	private String ownerNick;

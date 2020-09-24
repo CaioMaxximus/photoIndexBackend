@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,16 +14,16 @@ import com.travel.photo.model.Post;
 
 
 @RestController
-@RequestMapping("post")
+@RequestMapping("posts")
 @ResponseBody
 public class PostEndpoint {
 
-	@GetMapping("")
-	public Post getPost() {
+	@GetMapping("/{id")
+	public Post getPost(@PathVariable int id) {
 		return new Post();
 	}
 
-	@GetMapping("/list")
+	@GetMapping("/search")
 	public List<Post> getPosts(){
 		return new ArrayList<Post>();
 	}
